@@ -1,0 +1,208 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'c8\'e7\'ba\'ce\'ca\'b5\'cf\'d6\'b6\'af\'bb\'ad\'b5\'c4\'b9\'fd\'b6\'c9\'d0\'a7\'b9\'fb
+\f1 \
+
+\f0 \'b1\'be\'bd\'da\'d1\'a7\'cf\'b0\'c4\'bf\'b1\'ea
+\f1 \
+\
+
+\f0 \'d5\'c6\'ce\'d5\'c4\'a3\'d0\'cd\'b5\'c4\'b9\'fd\'b6\'c9\'b6\'af\'bb\'ad
+\f1 \
+\
+
+\f0 \'bf\'aa\'ca\'bc\'b0\'c9
+\f1 !\
+\
+
+\f0 \'d6\'d8\'d2\'aa\'b5\'c4\'ba\'dc
+\f1 \
+\
+
+\f0 \'c4\'a3\'d0\'cd\'b5\'bd\'c4\'a3\'d0\'cd\'d6\'ae\'bc\'e4\'b5\'c4\'b9\'fd\'b6\'c9\'a3\'ac\'c1\'bd\'b8\'f6\'bb\'f2\'d5\'df\'b6\'e0\'b8\'f6\'c4\'a3\'d0\'cd\'b5\'c4\'ca\'fd\'be\'dd\'b6\'a5\'b5\'e3\'b1\'d8\'d0\'eb\'cf\'e0\'cd\'ac
+\f1 \
+
+\f0 \'cf\'c8\'bf\'b4\'d0\'a7\'b9\'fb\'cd\'bc
+\f1 :\
+\
+
+\f0 \'ce\'d2\'c3\'c7\'cf\'c8\'bf\'b4\'d2\'bb\'cf\'c2\'ce\'d2\'c3\'c7\'b5\'c4\'c4\'a3\'d0\'cd\'ce\'c4\'bc\'fe
+\f1 \
+\
+1.
+\f0 \'d2\'bb\'b8\'f6\'cb\'c4\'b7\'bd\'d0\'ce
+\f1 ,
+\f0 \'b5\'ab\'ca\'c7\'b1\'df\'c9\'cf\'d3\'d0\'ba\'dc\'b6\'e0\'b6\'a5\'b5\'e3
+\f1 \
+\
+
+\f0 \'c5\'e0\'d1\'f8\'d1\'a7\'cf\'b0\'b5\'c4\'d0\'cb\'c8\'a4\'ba\'dc\'d6\'d8\'d2\'aa
+\f1 \
+\
+2.
+\f0 \'d5\'db\'d6\'e5\'b5\'c4\'c3\'e6
+\f1 \
+\
+
+\f0 \'c8\'c3\'d1\'a7\'cf\'b0\'b3\'c9\'ce\'aa\'d2\'bb\'d6\'d6\'cf\'b0\'b9\'df
+\f1 \
+\
+
+\f0 \'bd\'d3\'cf\'c2\'c0\'b4\'a3\'ac\'ce\'d2\'c3\'c7\'c8\'c3\'d5\'e2\'c1\'bd\'b8\'f6\'c3\'e6\'c6\'bd\'bb\'ac\'b9\'fd\'b6\'c9
+\f1 ,
+\f0 \'bb\'b0\'b2\'bb\'b6\'e0\'c9\'d9
+\f1 ,
+\f0 \'d6\'b1\'bd\'d3\'c9\'cf\'b8\'c9\'bb\'ee
+\f1 !\
+\
+
+\f0 \'ca\'b5\'d5\'bd\'bd\'b2\'bd\'e2
+\f1 \
+\
+
+\f0 \'b5\'da\'d2\'bb\'b2\'bd
+\f1 .
+\f0 \'b4\'b4\'bd\'a8\'b9\'a4\'b3\'cc
+\f1 (
+\f0 \'c2\'d4
+\f1 )\
+\
+
+\f0 \'b5\'da\'b6\'fe\'b2\'bd
+\f1 .
+\f0 \'cc\'ed\'bc\'d3\'ce\'d2\'c3\'c7\'b5\'c4\'ce\'c4\'bc\'fe\'b5\'bd\'b9\'a4\'b3\'cc\'d6\'d0\'c8\'a5
+\f1 \
+\
+
+\f0 \'d7\'a2\'d2\'e2\'c9\'cf\'cd\'bc\'c1\'bd\'b8\'f6\'b6\'bc\'ca\'c7\'c4\'a3\'d0\'cd
+\f1 \
+8C4C8A7E-BDAE-4AE4-BC51-B13A871FD4C0.png\
+\
+
+\f0 \'b5\'da\'c8\'fd\'b2\'bd
+\f1 .
+\f0 \'ce\'d2\'c3\'c7\'b4\'b4\'bd\'a8
+\f1 SCNView\
+\
+SCNView *scnView = [[SCNView alloc]initWithFrame:self.view.bounds];\
+scnView.backgroundColor = [UIColor blackColor];\
+scnView.scene = [SCNScene scene];\
+scnView.allowsCameraControl = true;\
+[self.view addSubview:scnView];\
+
+\f0 \'b5\'da\'cb\'c4\'b2\'bd
+\f1 .
+\f0 \'cc\'ed\'bc\'d3\'d5\'d5\'cf\'e0\'bb\'fa
+\f1 \
+\
+SCNNode *cameraNode = [SCNNode node];\
+cameraNode.position = SCNVector3Make(0, 0, 20);\
+cameraNode.camera = [SCNCamera camera];\
+cameraNode.camera.automaticallyAdjustsZRange = true;\
+[scnView.scene.rootNode addChildNode:cameraNode];\
+
+\f0 \'b5\'da\'ce\'e5\'b2\'bd
+\f1 .
+\f0 \'cb\'f7\'d2\'fd\'b5\'bd\'c4\'a3\'d0\'cd\'d6\'d0\'b5\'c4\'bc\'b8\'ba\'ce\'b6\'d4\'cf\'f3
+\f1 \
+\
+  NSURL *url1 = [[NSBundle mainBundle]URLForResource:@"aaa" withExtension:@"dae"];\
+  NSURL *url2 = [[NSBundle mainBundle]URLForResource:@"aaa2" withExtension:@"dae"];\
+  SCNScene *scene1 = [SCNScene sceneWithURL:url1 options:nil error:nil];\
+  SCNScene *scene2 = [SCNScene sceneWithURL:url2 options:nil error:nil];\
+  SCNGeometry *g1 = [scene1.rootNode childNodeWithName:@"plane" recursively:true].geometry;\
+   SCNGeometry *g2 = [scene2.rootNode childNodeWithName:@"plane" recursively:true].geometry;\
+  g1.firstMaterial.diffuse.contents = @"mapImage.png";\
+  g2.firstMaterial.diffuse.contents = @"mapImage.png";\
+
+\f0 \'b5\'da\'c1\'f9\'b2\'bd
+\f1 .
+\f0 \'b0\'d1\'b5\'da\'d2\'bb\'b8\'f6\'bc\'b8\'ba\'ce\'cc\'e5\'b0\'f3\'b6\'a8\'b5\'bd\'bd\'da\'b5\'e3\'c9\'cf\'cc\'ed\'bc\'d3\'b5\'bd\'b3\'a1\'be\'b0\'d6\'d0\'c8\'a5
+\f1 \
+\
+SCNNode *planeNode = [SCNNode node];\
+[scnView.scene.rootNode addChildNode:planeNode];\
+planeNode.geometry = g1;\
+[scnView.scene.rootNode addChildNode:planeNode];\
+
+\f0 \'b5\'bd\'d5\'e2\'c0\'ef\'ce\'d2\'c3\'c7\'b5\'c4\'d7\'bc\'b1\'b8\'b9\'a4\'d7\'f7\'d2\'d1\'be\'ad\'cd\'ea\'b3\'c9\'a3\'ac\'cf\'c2\'c3\'e6\'be\'cd\'ca\'c7\'ce\'d2\'c3\'c7\'bd\'f1\'cc\'ec\'b5\'c4\'d6\'d8\'b5\'e3\'c4\'da\'c8\'dd
+\f1 \
+\
+
+\f0 \'b5\'da\'c6\'df\'b2\'bd
+\f1 .
+\f0 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b9\'fd\'b6\'c9\'c6\'da
+\f1 ,
+\f0 \'cc\'ed\'bc\'d3\'ce\'d2\'c3\'c7\'d2\'aa\'b9\'fd\'b6\'c9\'b5\'c4\'c4\'a3\'d0\'cd
+\f1 \
+\
+planeNode.morpher = [[SCNMorpher alloc]init];\
+planeNode.morpher.targets = @[g2]; \
+
+\f0 \'b5\'da\'b0\'cb\'b2\'bd
+\f1 .
+\f0 \'c9\'e8\'d6\'c3\'b9\'fd\'b6\'c9\'b6\'af\'bb\'ad
+\f1 \
+\
+  CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"morpher.weights[0]"]; // 0 
+\f0 \'b4\'fa\'b1\'ed\'b9\'fd\'b6\'c9\'c4\'bf\'b1\'ea\'ca\'fd\'d7\'e9\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'c4\'a3\'d0\'cd
+\f1 \
+  animation.fromValue = @0.0;\
+  animation.toValue = @1.0;\
+  animation.autoreverses = YES;\
+  animation.repeatCount = INFINITY;\
+  animation.duration = 2;\
+  [planeNode addAnimation:animation forKey:nil];\
+
+\f0 \'b8\'df\'bc\'b6\'c4\'da\'c8\'dd
+\f1 \
+\
+
+\f0 \'cf\'c2\'c3\'e6\'bd\'d0\'b4\'f3\'bc\'d2\'d2\'bb\'d6\'d6\'bc\'f2\'b5\'a5\'b5\'c4\'b7\'bd\'ca\'bd\'ca\'b5\'cf\'d6\'c9\'cf\'c3\'e6\'b5\'c4\'d0\'a7\'b9\'fb
+\f1 ,
+\f0 \'cf\'c8\'b8\'f8\'bf\'b4\'d2\'bb\'d5\'c5\'cd\'bc
+\f1 \
+\
+
+\f0 \'c4\'a3\'d0\'cd\'ce\'c4\'bc\'fe\'bd\'d8\'cd\'bc
+\f1 \
+\
+
+\f0 \'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'c8\'c3\'c4\'a3\'d0\'cd\'c9\'e8\'bc\'c6\'ca\'a6\'b0\'ef\'ce\'d2\'c3\'c7\'b0\'d1\'b9\'fd\'b6\'c9\'b5\'bd\'d6\'b8\'b6\'a8\'b5\'c4\'c4\'bf\'b1\'ea\'bc\'b8\'ba\'ce\'b0\'f3\'b6\'a8\'b5\'bd\'ce\'d2\'c3\'c7\'b5\'c4\'ce\'c4\'bc\'fe\'d6\'d0
+\f1 \
+\
+
+\f0 \'bd\'d3\'cf\'c2\'c0\'b4\'a3\'ac\'d4\'d9\'bf\'b4\'ce\'d2\'c3\'c7\'b5\'c4\'b4\'fa\'c2\'eb\'d4\'f5\'c3\'b4\'d0\'b4
+\f1 \
+\
+NSURL *url3 = [[NSBundle mainBundle]URLForResource:@"foldingMap" withExtension:@"dae"];\
+SCNNode *node1 = [[SCNScene sceneWithURL:url3 options:nil error:nil].rootNode childNodeWithName:@"Map" recursively:true];\
+node1.geometry.firstMaterial.diffuse.contents = @"1.PNG";\
+[scnView.scene.rootNode addChildNode:node1];\
+\
+// 
+\f0 \'b9\'fd\'b6\'c9\'b6\'af\'bb\'ad\'ba\'cd\'c9\'cf\'c3\'e6\'b5\'c4\'d0\'b4\'b7\'a8\'d2\'bb\'d1\'f9
+\f1 \
+CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"morpher.weights[0]"];\
+animation.fromValue = @0.0;\
+animation.toValue = @1.0;\
+animation.autoreverses = YES;\
+animation.repeatCount = INFINITY;\
+animation.duration = 2;\
+[node1 addAnimation:animation forKey:nil];\
+
+\f0 \'ce\'d2\'c3\'c7\'c4\'a3\'d0\'cd\'b9\'fd\'b6\'c9\'b6\'af\'bb\'ad\'c4\'da\'c8\'dd\'bd\'b2\'bd\'e2\'cd\'ea\'b1\'cf
+\f1 ,
+\f0 \'c4\'e3\'d5\'c6\'ce\'d5\'c1\'cb\'c2\'f0
+\f1 ?\
+\uc0\u58913 \
+ \
+\uc0\u58918 \
+ \uc0\u58980   \uc0\u58914   \uc0\u59054   \uc0\u59212   \uc0\u59058 \
+\
+}

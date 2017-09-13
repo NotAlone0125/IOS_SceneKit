@@ -1,0 +1,206 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red46\green13\blue110;}
+{\*\expandedcolortbl;;\csgenericrgb\c18100\c5200\c43100;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'e4\'d6\'c8\'be\'c8\'ab\'be\'b0\'ca\'d3\'c6\'b5
+\f1 \
+\
+
+\f0 \'b1\'be\'bd\'da\'d1\'a7\'cf\'b0\'c4\'bf\'b1\'ea
+\f1 \
+
+\f0 \'ca\'b9\'d3\'c3
+\f1 SceneKit
+\f0 \'c8\'e7\'ba\'ce\'e4\'d6\'c8\'be\'c8\'ab\'be\'b0\'ca\'d3\'c6\'b5
+\f1 \
+
+\f0 \'c9\'cf\'d2\'bb\'bd\'da\'ce\'d2\'c3\'c7\'bd\'b2\'bd\'e2\'c1\'cb\'c8\'e7\'ba\'ce\'b2\'a5\'b7\'c5\'c6\'d5\'cd\'a8\'ca\'d3\'c6\'b5
+\f1 ,
+\f0 \'b1\'be\'bd\'da\'ce\'d2\'c3\'c7\'bd\'b2\'bd\'e2\'c8\'e7\'ba\'ce\'b2\'a5\'b7\'c5\'c8\'ab\'be\'b0\'ca\'d3\'c6\'b5
+\f1 ,
+\f0 \'c6\'e4\'ca\'b5\'c1\'bd\'d5\'df\'b5\'c4\'b2\'ee\'d2\'ec\'b2\'bb\'ca\'c7\'ba\'dc\'b4\'f3
+\f1 , 
+\f0 \'d6\'bb\'ca\'c7\'ca\'b9\'d3\'c3\'b5\'c4\'e4\'d6\'c8\'be\'bc\'b8\'ba\'ce\'cc\'e5\'d3\'d0\'cb\'f9\'b2\'bb\'cd\'ac\'a3\'ac\'c6\'d5\'cd\'a8\'ca\'d3\'c6\'b5\'ca\'b9\'d3\'c3\'b5\'c4\'ca\'c7\'c6\'bd\'c3\'e6\'bc\'b8\'ba\'ce\'cc\'e5
+\f1 ,
+\f0 \'ce\'d2\'c3\'c7\'c8\'ab\'be\'b0\'be\'cd\'ca\'b9\'d3\'c3\'c7\'f2\'cc\'e5\'a1\'a3
+\f1 \
+\
+
+\f0 \'d0\'a7\'b9\'fb\'c8\'e7\'cf\'c2
+\f1 \
+Scenekit_11.gif\
+\
+
+\f0 \'ca\'b5\'cf\'d6\'b2\'bd\'d6\'e8
+\f1 \
+1.
+\f0 \'b5\'da\'d2\'bb\'b2\'bd
+\f1  
+\f0 \'b4\'b4\'bd\'a8\'b9\'a4\'b3\'cc
+\f1 (
+\f0 \'c2\'d4
+\f1 )\
+\
+2.
+\f0 \'b5\'da\'b6\'fe\'b2\'bd
+\f1  
+\f0 \'b5\'bc\'c8\'eb\'c1\'bd\'b8\'f6\'d3\'ce\'cf\'b7\'bf\'f2\'bc\'dc
+\f1 \
+\
+import SceneKit\
+import SpriteKit\
+3.
+\f0 \'b5\'da\'c8\'fd\'b2\'bd
+\f1  
+\f0 \'b4\'b4\'bd\'a8\'d3\'ce\'cf\'b7\'d7\'a8\'d3\'c3\'ca\'d3\'cd\'bc
+\f1 \
+\
+ let scnView = SCNView(frame: self.view.bounds);\
+ scnView.scene = SCNScene()\
+ self.view.addSubview(scnView);\
+4.
+\f0 \'b5\'da\'cb\'c4\'b2\'bd
+\f1  
+\f0 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c9\'e3\'cf\'f1\'bb\'fa
+\f1 \
+\
+ let cameraNode = SCNNode()\
+ cameraNode.camera = SCNCamera()\
+ cameraNode.camera?.automaticallyAdjustsZRange = true;// 
+\f0 \'d7\'d4\'b6\'af\'b5\'f7\'bd\'da\'bf\'c9\'ca\'d3\'b7\'b6\'ce\'a7
+\f1 \
+ cameraNode.position = SCNVector3Make(0, 0, 0);// 
+\f0 \'b0\'d1\'c9\'e3\'cf\'f1\'bb\'fa\'b7\'c5\'d4\'da\'d6\'d0\'bc\'e4
+\f1 \
+ scnView.scene?.rootNode.addChildNode(cameraNode);\
+5.
+\f0 \'b5\'da\'ce\'e5\'b2\'bd
+\f1  
+\f0 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bd\'da\'b5\'e3\'b2\'a2\'b0\'f3\'b6\'a8\'d2\'bb\'b8\'f6\'c7\'f2\'cc\'e5\'bc\'b8\'ba\'ce\'b6\'d4\'cf\'f3
+\f1 \
+\
+  let panoramaNode = SCNNode()\
+  panoramaNode.geometry = SCNSphere(radius: 100);\
+  panoramaNode.geometry?.firstMaterial?.isDoubleSided = false// 
+\f0 \'b9\'d8\'b1\'d5\'cb\'ab\'c3\'e6\'e4\'d6\'c8\'be
+\f1 ,
+\f0 \'cc\'e1\'b8\'df\'d0\'d4\'c4\'dc
+\f1 \
+  panoramaNode.geometry?.firstMaterial?.cullMode = .
+\f2\fs28 \cf2 \CocoaLigature0 front
+\f1\fs24 \cf0 \CocoaLigature1 \
+  panoramaNode.position = SCNVector3Make(0, 0, 0);\
+  scnView.scene?.rootNode.addChildNode(panoramaNode);\
+
+\f0 \'be\'ad\'d1\'e9
+\f1 :\
+\
+1.
+\f0 \'c8\'ab\'be\'b0\'d2\'bb\'b0\'e3\'d5\'d5\'cf\'e0\'bb\'fa\'d3\'a6\'b8\'c3\'b7\'c5\'d4\'da\'c7\'f2\'cc\'e5\'d6\'d0\'bc\'e4
+\f1 ,
+\f0 \'ce\'d2\'c3\'c7\'d2\'aa\'e4\'d6\'c8\'be\'c4\'da\'b1\'ed\'c3\'e6
+\f1 ,
+\f0 \'b5\'ab\'ca\'c7\'c4\'ac\'c8\'cf\'e4\'d6\'c8\'be\'b5\'c4\'ca\'c7\'cd\'e2\'b1\'ed\'c3\'e6
+\f1 ,
+\f0 \'cb\'f9\'d2\'d4\'ce\'d2\'c3\'c7\'c9\'e8\'d6\'c3\'d2\'bb\'cf\'c2
+\f1 noramaNode.geometry?.firstMaterial?.cullMode = .back\
+\
+2.
+\f0 \'c8\'e7\'b9\'fb\'c4\'e3\'cf\'eb\'c1\'bd\'b8\'f6\'c3\'e6\'b6\'bc\'bd\'f8\'d0\'d0\'e4\'d6\'c8\'be\'c7\'eb\'ca\'b9\'d3\'c3
+\f1 panoramaNode.geometry?.firstMaterial?.isDoubleSided = true 3.panoramaNode.geometry = SCNSphere(radius: 100) 
+\f0 \'b0\'eb\'be\'b6\'b2\'bb\'d2\'aa\'c9\'e8\'d6\'c3\'cc\'ab\'d0\'a1
+\f1 \
+\
+6.
+\f0 \'b5\'da\'c1\'f9\'b2\'bd
+\f1  
+\f0 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f1 2D
+\f0 \'d3\'ce\'cf\'b7\'b3\'a1\'be\'b0\'ba\'cd\'d2\'bb\'b8\'f6\'b2\'a5\'b7\'c5\'ca\'d3\'c6\'b5\'b5\'c4\'b6\'d4\'cf\'f3
+\f1 \
+\
+  let url = Bundle.main.url(forResource: "fly", withExtension: "mp4")\
+  let videoNode = SKVideoNode(url: url!)\
+  videoNode.size = CGSize(width: 1600, height: 900)\
+  videoNode.position = CGPoint(x: videoNode.size.width/2, y: videoNode.size.height/2)\
+  videoNode.zRotation = CGFloat(M_PI)\
+  let skScene = SKScene()\
+  skScene.addChild(videoNode)\
+  skScene.size = videoNode.size\
+
+\f0 \'be\'ad\'d1\'e9\'a3\'ba
+\f1 \
+\
+1.
+\f0 \'ca\'d3\'c6\'b5\'cc\'ed\'bc\'d3\'b5\'bd\'cf\'ee\'c4\'bf\'d6\'d0\'b5\'c4\'ca\'b1\'ba\'f2
+\f1 ,
+\f0 \'ca\'b9\'d3\'c3\'d3\'d2\'bb\'f7
+\f1 ->add File to 
+\f0 \'b5\'c4\'b7\'bd\'ca\'bd\'cc\'ed\'bc\'d3\'ce\'c4\'bc\'fe
+\f1 \
+2.
+\f0 \'d6\'b8\'b6\'a8\'ca\'d3\'c6\'b5\'bd\'da\'b5\'e3\'b5\'c4\'b4\'f3\'d0\'a1
+\f1  videoNode.size \
+3.
+\f0 \'d6\'b8\'b6\'a8
+\f1 2d
+\f0 \'b3\'a1\'be\'b0\'b5\'c4\'b4\'f3\'d0\'a1
+\f1 ,
+\f0 \'d5\'e2\'b8\'f6\'d2\'bb\'b0\'e3\'ba\'cd\'ca\'d3\'c6\'b5\'bd\'da\'b5\'e3\'b4\'f3\'d0\'a1\'b1\'a3\'b3\'d6\'d2\'bb\'d6\'c2
+\f1 ,
+\f0 \'c8\'e7\'b9\'fb\'c4\'e3\'d3\'d0\'cc\'d8\'ca\'e2\'d2\'aa\'c7\'f3
+\f1 ,
+\f0 \'bf\'c9\'d2\'d4\'b8\'f9\'be\'dd\'d2\'aa\'c7\'f3\'c9\'e8\'d6\'c3
+\f1 \
+4.videoNode.zRotation = CGFloat(M_PI)
+\f0 \'d7\'a2\'d2\'e2
+\f1 ,
+\f0 \'d5\'e2\'b5\'e3\'b7\'c7\'b3\'a3\'d6\'d8\'d2\'aa
+\f1 ,
+\f0 \'d2\'bb\'b6\'a8\'d2\'aa\'bd\'ab\'ca\'d3\'c6\'b5\'bd\'da\'b5\'e3\'d0\'fd\'d7\'aa
+\f1 180
+\f0 \'b6\'c8
+\f1 ,
+\f0 \'b7\'f1\'d4\'f2\'e4\'d6\'c8\'be\'b3\'f6\'c0\'b4\'b5\'c4\'bb\'ad\'c3\'e6\'bb\'e1\'b5\'df\'b5\'b9\'a1\'a3
+\f1 \
+\
+7.
+\f0 \'b5\'da\'c6\'df\'b2\'bd
+\f1  
+\f0 \'b8\'f8\'c6\'bd\'c3\'e6\'cc\'e5\'c9\'e8\'d6\'c3\'e4\'d6\'c8\'be\'c4\'da\'c8\'dd
+\f1 \
+\
+plane.firstMaterial?.diffuse.contents = skScene\
+8.
+\f0 \'b5\'da\'b0\'cb\'b2\'bd
+\f1  
+\f0 \'b2\'a5\'b7\'c5\'ca\'d3\'c6\'b5
+\f1 \
+\
+videoNode.play()\
+9.
+\f0 \'b5\'da\'ca\'ae\'b2\'bd
+\f1  
+\f0 \'b4\'f2\'bf\'aa\'c9\'e3\'cf\'f1\'cd\'b7\'bf\'d8\'d6\'c6\'b2\'e9\'bf\'b4\'d0\'a7\'b9\'fb
+\f1 \
+\
+scnView.allowsCameraControl = true;\
+
+\f0 \'b1\'be\'bd\'da\'c4\'da\'c8\'dd
+\f1  
+\f0 \'be\'cd\'bd\'b2\'b5\'bd\'d5\'e2\'c0\'ef
+\f1 ,
+\f0 \'b4\'fa\'c2\'eb\'c7\'eb\'b5\'bd\'c8\'ba\'c0\'ef
+\f1 (530957835)
+\f0 \'d7\'d4\'c8\'a1
+\f1 \
+\uc0\u58913 \
+ \
+\uc0\u58918 \
+ \uc0\u58980   \uc0\u58914   \uc0\u59054   \uc0\u59212   \uc0\u59058 \
+\
+}
